@@ -1,0 +1,163 @@
+*,
+html {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(212.7, 26.8%, 83.9%);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: hsl(222, 47.4%, 11.2%);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.28);
+  padding: 1em;
+  z-index: 10;
+}
+
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  background-color: hsl(210, 40%, 96.1%);
+  box-shadow: 2px 0 2px rgb(0, 0, 0, 0.1);
+  z-index: 1;
+  transition: all 0.45s ease-in-out;
+}
+
+.sidebar > ul.menu {
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  transition: all 0.45s ease-in-out;
+}
+
+.sidebar > ul {
+  padding: 0.8em;
+}
+
+.sidebar > ul.menu > li {
+  list-style: none;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 0.6em 1.2em;
+  margin: 0.6em 0;
+  border-radius: 0.3em;
+  background-color: rgba(207, 216, 220, 0.65);
+}
+
+.sidebar > ul.menu > li:hover {
+  background-color: rgba(207, 216, 220, 0.95);
+  cursor: pointer;
+}
+
+.sidebar > ul.menu > li:active {
+  background-color: rgba(207, 216, 220, 0.25);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: 240px;
+  transition: all 0.45s ease-in-out;
+}
+
+.container {
+  max-width: 1440px;
+  height: 1400px;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1280px) {
+  .sidebar {
+    left: -120px;
+  }
+  main {
+    padding-left: 120px;
+  }
+  .sidebar > ul.menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .sidebar {
+    left: -240px;
+    box-shadow: none;
+  }
+  main {
+    padding-left: 0;
+  }
+}
+
+.btn {
+  font-size: 0.8em;
+  margin: 2em 1em;
+  padding: 1.2em 3.4em;
+  border: none;
+  border-radius: 0.2em;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.btn:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+/* Color Primary */
+.btn.btn-colored {
+  color: white;
+  background-color: hsl(206.57, 89.74%, 54.12%);
+}
+.btn.btn-colored:active {
+  background-color: hsl(208.04, 79.28%, 50.78%);
+}
+
+/* Color success */
+.btn.btn-success {
+  color: white;
+  background-color: hsl(122.42, 39.44%, 49.22%);
+}
+.btn.btn-success:active {
+  background-color: hsl(122.58, 40.97%, 44.51%);
+}
+
+/* Color danger */
+.btn.btn-danger {
+  color: white;
+  background-color: hsl(4.11, 89.62%, 58.43%);
+}
+.btn.btn-danger:active {
+  background-color: hsl(1.36, 77.19%, 55.29%);
+}
+
+.btn-awesome {
+  color: white;
+  background-color: hsl(230.88, 98.84%, 66.08%);
+}
+
+.btn-awesome:active {
+  background-color: hsl(230.98, 98.97%, 61.76%);
+}
+
+.btn-default {
+  color: white;
+  background-color: hsl(199.53, 18.3%, 46.08%);
+}
+.btn-default:active {
+  background-color: hsl(198.95, 18.45%, 40.39%);
+}
